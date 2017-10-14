@@ -2,12 +2,11 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@*Displaying the Date *@
+<H3>Today is </H3><p> @DateTime.Now.DayOfWeek.ToString()    @DateTime.Now.ToString()</p>
 
+
+@**Loop through the names in an unordered list on your page using Razor*@
 <h2> List Of Names</h2>
 @{ 
     var Names = new List<string> { "Sany", "Ezabil", "Brayen", "sheralle", "Ghone" };
@@ -30,25 +29,31 @@
         }
     </ul>
 
+@**Use a multi-line razor statement to make two variables
+    (string UserName and string Greeting) and set the values to whatever you want.*@
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@{ 
+    var UserName = " Sany Yousif";
+    var Greating = " Hello Hello ";
+ }
+
+<h2>  @UserName Say to everyone @Greating </h2>
+
+@**Use an if statement to print "TGIF" on the page if it's Friday*@
+
+@{ 
+    var FridayMSG = "TGIF";
+    var NotFridayMSG = " NO TIGF";
+}
+@if (@DateTime.Now.DayOfWeek.ToString() == "Friday" )
+{
+    <h2>  @FridayMSG </h2>
+}
+else
+{
+    <h3> @NotFridayMSG</h3>
+}
+
+
+
+
