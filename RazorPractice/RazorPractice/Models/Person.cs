@@ -7,9 +7,10 @@ namespace RazorPractice.Models
 {
     public class Person
     {
+        public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Job { get; set; }
-        public string address { get; set; }
+        public string Address { get; set; }
     }
 }

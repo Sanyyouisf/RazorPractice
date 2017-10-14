@@ -1,13 +1,13 @@
 ﻿@model RazorPractice.Models.Song
 
 @{
-    ViewBag.Title = "CreateSongView";
+    ViewBag.Title = "Create";
 }
 
-<h2>CreateSong</h2>
+<h2>Create</h2>
 
 
-@using (Html.BeginForm("AddSongAction","Song")) 
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     

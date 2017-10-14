@@ -7,19 +7,16 @@ using System.Web.Mvc;
 
 namespace RazorPractice.Controllers
 {
-    public class OrderController : Controller
+    public class AlbumController : Controller
     {
-        public ActionResult CreateOrderAction(Order order)
+        public ActionResult AddAlbumAction(Album album)
         {
-            return RedirectToAction("CreateOrderView");
+            return RedirectToAction("AlbumView");
         }
-
-        // GET: OrderController
-        public ActionResult CreateOrderView()
+        // GET: Album
+        public ActionResult AlbumView()
         {
             return View();
         }
-
-        
     }
 }
